@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <title>Лабораторная работа 5</title>
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <a href="main.html">Основная страница</a>
+            <a href="page2.html">Позиционирование элементов</a>
+            <a href="table.html">Таблица</a>
+        </div>
+    </div>
+
+    <table class="table">
+        <caption>Список студентов</caption>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>ФИО</th>
+                <th>Серия и номер паспорта</th>
+                <th>Номер группы</th>
+                <th>Пол</th>
+                <th>Возраст</th>
+                <th>Форма обучения</th>
+                <th>Код направления</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Иванов Иван Иванович</td>
+                <td>3619 69124</td>
+                <td>6203</td>
+                <td>Мужской</td>
+                <td>19</td>
+                <td>Бюджет</td>
+                <td>09.03.01</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Брагина Злата Сергеевна</td>
+                <td>3618 28393</td>
+                <td>6205</td>
+                <td>Женский</td>
+                <td>20</td>
+                <td>Платная</td>
+                <td>02.04.02</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Кулагин Дмитрий Алексеевич</td>
+                <td>3620 81789</td>
+                <td>6102</td>
+                <td>Мужской</td>
+                <td>18</td>
+                <td>Целевое</td>
+                <td>09.03.01</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Викторова Мария Витальевна</td>
+                <td>3120 58933</td>
+                <td>6102</td>
+                <td>Женский</td>
+                <td>18</td>
+                <td>Бюджет</td>
+                <td>01.03.02</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Скрытопулов Роман Джоджович</td>
+                <td>3519 25156</td>
+                <td>6201</td>
+                <td>Мужской</td>
+                <td>19</td>
+                <td>Бюджет</td>
+                <td>09.03.01</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form id="addStudentForm">
+        <h2>Добавление строки</h2>
+        <label for="fio">ФИО:</label>
+        <input type="text" id="fio" name="fio" required><br>
+
+        <label for="passport">Серия и номер паспорта:</label>
+        <input type="text" id="passport" name="passport" required><br>
+
+        <label for="group">Номер группы:</label>
+        <input type="text" id="group" name="group" required><br>
+
+        <label for="gender">Пол:</label>
+        <select id="gender" name="gender" required>
+            <option value="Мужской">Мужской</option>
+            <option value="Женский">Женский</option>
+        </select><br>
+
+        <label for="age">Возраст:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="form">Форма обучения:</label>
+        <select id="form" name="form" required>
+            <option value="Бюджет">Бюджет</option>
+            <option value="Платная">Платная</option>
+            <option value="Целевое">Целевое</option>
+        </select><br>
+
+        <label for="code">Код направления:</label>
+        <input type="text" id="code" name="code" required><br>
+
+        <button type="submit">Добавить</button>
+    </form>
+
+    <script>
+        document.getElementById('addStudentForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const fio = document.getElementById('fio').value;
+            const passport = document.getElementById('passport').value;
+            const group = document.getElementById('group').value;
+            const gender = document.getElementById('gender').value;
+            const age = document.getElementById('age').value;
+            const form = document.getElementById('form').value;
+            const code = document.getElementById('code').value;
+            const tableBody = document.querySelector('.table tbody');
+            const newRow = tableBody.insertRow();
+            const idCell = newRow.insertCell();
+            const fioCell = newRow.insertCell();
+            const passportCell = newRow.insertCell();
+            const groupCell = newRow.insertCell();
+            const genderCell = newRow.insertCell();
+            const ageCell = newRow.insertCell();
+            const formCell = newRow.insertCell();
+            const codeCell = newRow.insertCell();
+            idCell.textContent = tableBody.rows.length;
+            fioCell.textContent = fio;
+            passportCell.textContent = passport;
+            groupCell.textContent = group;
+            genderCell.textContent = gender;
+            ageCell.textContent = age;
+            formCell.textContent = form;
+            codeCell.textContent = code;
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

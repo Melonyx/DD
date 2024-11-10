@@ -1,0 +1,184 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('NAURYZREDKEDS.ttf');
+}
+
+@font-face {
+  font-family: 'MyFont2';
+  src: url('quantum.ttf');
+}
+
+body {
+  background-color: #035200;
+  font-family: 'MyFont2', sans-serif;
+}
+
+.header {
+  background-color: #ceffdd;
+  color: #035200;
+  padding: 10px;
+  text-align: right;
+}
+
+.header a {
+  color: #035200;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+.header a:hover {
+  color: #035200;
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.content-left {
+  width: 30%;
+  height: auto;
+  padding: 10px;
+  background-color: #ceffdd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.content-right {
+  width: 65%;
+  height: auto;
+  padding: 10px;
+  background-color: #ceffdd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+.content-right img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1, h2, h3 {
+  font-family: 'MyFont', sans-serif;
+}
+
+h1 {
+  font-size: 52px;
+  color: #035200;
+  margin-bottom: 13px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 52px;
+  color: #ceffdd;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+ul, ol {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+a {
+  font-family: 'MyFont', sans-serif;
+  color: #ceffdd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ceffdd;
+  text-decoration: underline;
+}
+
+.fixed-element {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.container {
+  background-color: #ceffdd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-2 {
+  background-color: #ceffdd;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-3 {
+  background-color: #ceffdd;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-4 {
+  background-color: #ceffdd;
+  width: auto;
+  height: 400px;
+  position: relative;
+}
+
+.block {
+  width: 200px;
+  height: 200px;
+  background-color: hsl(41, 30%, 73%);
+}
+
+.block-2 {
+  width: 200px;
+  height: 200px;
+  background-color: hsl(41, 30%, 73%);
+  margin: 10px;
+}
+
+.block-3 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.red {
+  position: absolute;
+  top: 100;
+  left: 100;
+  border: 2px solid red;
+}
+
+.blue {
+  position: absolute;
+  top: 166px;
+  left: 166px;
+  border: 2px solid blue;
+}
+
+.green {
+  position: absolute;
+  top: 232px;
+  left: 232px;
+  border: 2px solid green;
+}
